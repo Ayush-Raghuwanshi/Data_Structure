@@ -79,6 +79,6 @@ int main(){
     push(s,6);
     push(s,9);
     printf("%d\n",pop(s));
-    
+    deleteStack(s);
     return 0;
 } 
