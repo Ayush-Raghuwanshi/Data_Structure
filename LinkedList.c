@@ -14,6 +14,24 @@ void traverse(struct node* head){
         current=current->next;
     }
 }
+struct node* removeElements(struct node* head, int val){
+    struct node* curr=head;
+    struct node* prev=NULL;
+    while(curr&&curr->data==val){
+        curr=curr->next;
+    }
+    head=curr;
+    
+    while(curr&&curr->next){
+        
+        if(curr->next->data==val){
+            curr->next=curr->next->next;
+            continue;
+        }
+        curr=curr->next;
+    }
+    return head;
+}
 
 void shift(struct node* head,int data){
     struct node* temp =NULL;
