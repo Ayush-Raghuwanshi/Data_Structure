@@ -1,6 +1,6 @@
 
 
-    struct node* reverseList(struct node *head)
+    struct node* reverseList(struct node *head)  //reversing the list
     {
         struct node *prev=head,*curr=head->next,*prevp=NULL;
         while(curr){
@@ -13,7 +13,7 @@
         return prev;
     }
     
-    struct node* retptr(struct node* head,int k){
+    struct node* retptr(struct node* head,int k){    // traversing into list k times
         struct node* curr=head;
         k--;
         while(k--){
